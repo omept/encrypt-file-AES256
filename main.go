@@ -58,6 +58,7 @@ func start() {
 	newFileName := os.Getenv("ENCRYPTED_FILE_NAME")
 	err = os.WriteFile(newFileName, encBytes, 0666)
 	checkerr.Check(err)
+	log.Printf("💪🏽 Encryption Complete")
 
 }
 
