@@ -29,9 +29,7 @@ func start() {
 
 	fileName := os.Getenv("FILE_NAME") // file to encrypt
 	file, err := os.Open(fileName)
-	if err != nil {
-		log.Println("error: ", err)
-	}
+	checkerr.Check(err)
 
 	key := os.Getenv("ENCRYPT_DECRYPT_KEY") // key lenght of 32 to use AES-256
 	var bucket [1024 * 10]byte              // copy to memory by reading chuncks of 1024 * 10 bytes (10kb) from the file
