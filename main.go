@@ -49,7 +49,7 @@ func start() {
 		memFile.Write(bucket[:n])
 	}
 	file.Close()
-	log.Printf("✅ File completly coppied to memory")
+	log.Printf("✅ File completly copied to memory")
 
 	encBytes, err := encrypt(memFile.Bytes(), key)
 	checkerr.Check(err)
